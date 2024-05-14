@@ -62,7 +62,7 @@ public class yatzy30 {
                     String value = scanner.nextLine(); //Läser in vilken tärning som ska behållas
                     String[] array = value.split(" "); // Delar upp inmatningen i en array baserat på hur många mellanslag som anges
                     int valdaTarningar = 0; // Variabel för antalet sparade/valda tärningar. Återsålls vid varje kast
-                    for (String s : array) { 
+                    for (String s : array) { // Skriver ut allt i array;en en i taget
                         int vald = Integer.parseInt(s) - 1; // Konvertera en string s till ett heltal och tar bort 1
                         if (vald >= 0 && vald < 6) {// Kontrollerar så det är inom korrekt interval
                             System.out.println("You choose: " + tarningar[vald]); // Skriver ut de tal spelaren valt
@@ -245,7 +245,7 @@ public class yatzy30 {
                                     System.out.println("Rerolling " + nyttAntal + " die...");
                                     for (int i = 0, j = 0; i < 6; i++) {
                                         if (tarningar[i] != 1) {
-                                            nyaTarningar[j++] = (int) (Math.random() * 6) + 1;
+                                            Tarningar[j++] = (int) (Math.random() * 6) + 1;
                                         }
                                     }
                                     System.out.println("New dice values: ");
